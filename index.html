@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time Tracking</title>
+    <link rel="stylesheet" href="./src/styles/compiler/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <section class="user">
+                <div class="user__data">
+                    <img src="./src/styles/images/image-jeremy.png" alt="self-photo" class="user__data--img">
+                    <div class="user__data--name">
+                        <p>Report for</p>
+                        <h4>Jeremy <span>Robson</span></h4>
+                    </div>
+                </div>
+                <div class="user__timelist">
+                    <ul>
+                        <li><span class="timePeriod">Daily</span></li>
+                        <li><span class="timePeriod">Weekly</span></li>
+                        <li><span class="timePeriod">Monthly</span></li>
+                    </ul>
+                </div>
+            </section>
+                <article class="timers__wrapper--work">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Work</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dWork">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="timers__wrapper--play">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Play</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dPlay">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="timers__wrapper--study">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Study</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dStudy">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="timers__wrapper--exercise">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Exercise</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dExercise">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="timers__wrapper--social">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Social</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dSocial">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="timers__wrapper--self">
+                    <div class="timers__wrapper">
+                        <header class="timers__detail">
+                            <h6>Self care</h6>
+                            <span></span>
+                        </header>
+                        <div class="timers__time">
+                            <p id="dSelf">0hrs</p>
+                            <p>Last Week - 0 hrs</p>
+                        </div>
+                    </div>
+                </article>
+        </div>
+
+        <script src="./src/scripts/periodsTime.js"></script>
+        <script src="./src/scripts/main.js" type="module"></script>
+    </main>
+</body>
+</html>

@@ -1,0 +1,210 @@
+$main-color: hsl(226, 43%, 10%);
+$user-color: hsl(246, 80%, 60%);
+$secondary-color: hsl(235, 46%, 20%);
+$work-color: hsl(15, 100%, 70%);
+$play-color: hsl(195, 74%, 62%);
+$study-color: hsl(348, 100%, 68%);
+$exercise-color: hsl(145, 58%, 55%);
+$social-color: hsl(264, 64%, 52%);
+$self-color: hsl(43, 84%, 65%);
+$font-color: hsl(236, 100%, 87%);
+
+@mixin media($breakpoint) {
+    @if($breakpoint == desktop) {
+        @media only screen and (min-width: 1440px) {@content;}
+    }
+}
+@mixin boxtime {
+    width: 320px;
+    height: 200px;
+    border-radius: 18px;
+    display: flex;
+    align-items: flex-end;
+    background-repeat: no-repeat;
+    background-position: top right 5%;
+    margin-bottom: 20px;
+    @include media(desktop) {
+        margin: 0 10px 20px 10px;
+        height: 240px;
+    }
+}
+@mixin detailbox {
+    width: 100%;
+    height: 150px;
+    border-radius: 15px;
+    @include media(desktop) {
+        height: 180px;
+    }
+}
+
+li > .textSelect {
+    color: white;
+    text-shadow: 0.3px 0.3px 1.2px white;
+}
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: $main-color;
+    @include media(desktop) {
+        height: 100vh;
+    }
+}
+main > .container  {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    @include media(desktop) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "user work play study"
+                             "user exer soci self";
+    }
+    .user {
+        width: 320px;
+        height: 220px;
+        border-radius: 15px;
+        margin-bottom: 20px;
+        background-color: $secondary-color;
+        @include media(desktop) {
+            grid-area: user;
+            height: 100%;
+            margin: 0px 20px;
+            width: 280px;
+            justify-self: right;
+        }
+        &__data {
+            height: 160px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            background-color: $user-color;
+            border-radius: 20px;
+            justify-content: center;
+            align-items: center;
+            @include media(desktop) {
+                height: 360px;
+                display: inline-block;
+            }
+            &--img {
+                height: 80px;
+                width: 80px;
+                border: 5px solid white;
+                border-radius: 50%;
+                @include media(desktop) {
+                    margin: 30px 0 40px 30px;
+                }
+            }
+            &--name {
+                margin-left: 10px;
+                @include media(desktop) {
+                    margin-left: 30px;
+                }
+            }
+            p {
+                color: white;
+                font-size: 14px;
+                font-weight: 200;
+            }
+            h4 {
+                color: white;
+                font-size: 24px;
+                font-weight: 300;
+                @include media(desktop) {
+                    font-size: 34px;
+                }
+                span {
+                    @include media(desktop) {
+                        display: block;
+                    }
+                }
+            }
+            p, h4 {
+                margin: 0;
+            }
+        }
+        &__timelist {
+            width: 100%;
+            ul {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 0;
+                @include media(desktop) {
+                    display: inline-block;
+                    margin-top: 30px;
+                }
+            }
+            li {
+                list-style: none;
+                color: $font-color;
+                text-align: center;
+                cursor: pointer;
+                @include media(desktop) {
+                    text-align: left;
+                    margin: 0 0 20px 20px;
+                }
+            }
+
+        }
+    }
+    .timers__wrapper {
+        @include detailbox;
+            background: $secondary-color;
+            padding: 0 20px 0 20px;
+            color: white;
+    }
+    .timers__detail {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        h6 {
+            margin: 24px 0 0 0;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        span {
+            width: 20px;
+            height: 20px;
+            background-image: url('../images/icon-ellipsis.svg');
+            background-repeat: no-repeat;
+            background-position: bottom;
+            background-size: contain;
+            cursor: pointer;
+        }
+    }
+    .timers__time {        
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include media(desktop) {
+            display: block;
+        }
+        p:nth-child(1) {
+            font-size: 32px;
+            font-weight: 300;
+            @include media(desktop) {
+                font-size: 48px;
+                margin: 20px 0 10px 0px;
+            }
+        }
+        p:nth-child(2) {
+            font-size: 12px;
+            letter-spacing: 0.8px;
+        }
+    }
+}

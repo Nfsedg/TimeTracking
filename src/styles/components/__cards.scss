@@ -1,0 +1,48 @@
+.timers__wrapper--work {
+    @include boxtime;
+    background-color: $work-color;
+    background-image: url('../images/icon-work.svg');
+    @include media(desktop) {
+        grid-area: work
+    }
+}
+.timers__wrapper--play {
+    @include boxtime;
+    background-color: $play-color;
+    background-image: url('../images/icon-play.svg');
+    @include media(desktop) {
+        grid-area: play
+    }
+}
+.timers__wrapper--study {
+    @include boxtime;
+    background-color: $study-color;
+    background-image: url('../images/icon-study.svg');
+    @include media(desktop) {
+        grid-area: study
+    }
+}
+.timers__wrapper--exercise {
+    @include boxtime;
+    background-color: $exercise-color;
+    background-image: url('../images/icon-exercise.svg');
+    @include media(desktop) {
+        grid-area: exer
+    }
+}
+.timers__wrapper--social {
+    @include boxtime;
+    background-color: $social-color;
+    background-image: url('../images/icon-social.svg');
+    @include media(desktop) {
+        grid-area: soci
+    }
+}
+.timers__wrapper--self {
+    @include boxtime;
+    background-color: $self-color;
+    background-image: url('../images/icon-self-care.svg');
+    @include media(desktop) {
+        grid-area: self
+    }
+}

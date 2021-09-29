@@ -1,0 +1,346 @@
+li > .textSelect {
+  color: white;
+  text-shadow: 0.3px 0.3px 1.2px white;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif;
+}
+
+main {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-color: #0f1424;
+}
+@media only screen and (min-width: 1440px) {
+  main {
+    height: 100vh;
+  }
+}
+
+main > .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "user work play study" "user exer soci self";
+  }
+}
+main > .container .user {
+  width: 320px;
+  height: 220px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  background-color: #1c1f4a;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user {
+    grid-area: user;
+    height: 100%;
+    margin: 0px 20px;
+    width: 280px;
+    justify-self: right;
+  }
+}
+main > .container .user__data {
+  height: 160px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: #5847eb;
+  border-radius: 20px;
+  justify-content: center;
+  align-items: center;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__data {
+    height: 360px;
+    display: inline-block;
+  }
+}
+main > .container .user__data--img {
+  height: 80px;
+  width: 80px;
+  border: 5px solid white;
+  border-radius: 50%;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__data--img {
+    margin: 30px 0 40px 30px;
+  }
+}
+main > .container .user__data--name {
+  margin-left: 10px;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__data--name {
+    margin-left: 30px;
+  }
+}
+main > .container .user__data p {
+  color: white;
+  font-size: 14px;
+  font-weight: 200;
+}
+main > .container .user__data h4 {
+  color: white;
+  font-size: 24px;
+  font-weight: 300;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__data h4 {
+    font-size: 34px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__data h4 span {
+    display: block;
+  }
+}
+main > .container .user__data p, main > .container .user__data h4 {
+  margin: 0;
+}
+main > .container .user__timelist {
+  width: 100%;
+}
+main > .container .user__timelist ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__timelist ul {
+    display: inline-block;
+    margin-top: 30px;
+  }
+}
+main > .container .user__timelist li {
+  list-style: none;
+  color: #bdc1ff;
+  text-align: center;
+  cursor: pointer;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .user__timelist li {
+    text-align: left;
+    margin: 0 0 20px 20px;
+  }
+}
+main > .container .timers__wrapper {
+  width: 100%;
+  height: 150px;
+  border-radius: 15px;
+  background: #1c1f4a;
+  padding: 0 20px 0 20px;
+  color: white;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .timers__wrapper {
+    height: 180px;
+  }
+}
+main > .container .timers__detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main > .container .timers__detail h6 {
+  margin: 24px 0 0 0;
+  font-size: 18px;
+  font-weight: 400;
+}
+main > .container .timers__detail span {
+  width: 20px;
+  height: 20px;
+  background-image: url("../images/icon-ellipsis.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+  background-size: contain;
+  cursor: pointer;
+}
+main > .container .timers__time {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .timers__time {
+    display: block;
+  }
+}
+main > .container .timers__time p:nth-child(1) {
+  font-size: 32px;
+  font-weight: 300;
+}
+@media only screen and (min-width: 1440px) {
+  main > .container .timers__time p:nth-child(1) {
+    font-size: 48px;
+    margin: 20px 0 10px 0px;
+  }
+}
+main > .container .timers__time p:nth-child(2) {
+  font-size: 12px;
+  letter-spacing: 0.8px;
+}
+
+.timers__wrapper--work {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #ff8c66;
+  background-image: url("../images/icon-work.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--work {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--work {
+    grid-area: work;
+  }
+}
+
+.timers__wrapper--play {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #56c2e6;
+  background-image: url("../images/icon-play.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--play {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--play {
+    grid-area: play;
+  }
+}
+
+.timers__wrapper--study {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #ff5c7c;
+  background-image: url("../images/icon-study.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--study {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--study {
+    grid-area: study;
+  }
+}
+
+.timers__wrapper--exercise {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #4acf81;
+  background-image: url("../images/icon-exercise.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--exercise {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--exercise {
+    grid-area: exer;
+  }
+}
+
+.timers__wrapper--social {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #7536d3;
+  background-image: url("../images/icon-social.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--social {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--social {
+    grid-area: soci;
+  }
+}
+
+.timers__wrapper--self {
+  width: 320px;
+  height: 200px;
+  border-radius: 18px;
+  display: flex;
+  align-items: flex-end;
+  background-repeat: no-repeat;
+  background-position: top right 5%;
+  margin-bottom: 20px;
+  background-color: #f1c65b;
+  background-image: url("../images/icon-self-care.svg");
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--self {
+    margin: 0 10px 20px 10px;
+    height: 240px;
+  }
+}
+@media only screen and (min-width: 1440px) {
+  .timers__wrapper--self {
+    grid-area: self;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
